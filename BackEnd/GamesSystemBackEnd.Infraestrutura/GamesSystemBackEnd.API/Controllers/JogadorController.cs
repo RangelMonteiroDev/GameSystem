@@ -41,7 +41,7 @@ namespace GamesSystemBackEnd.API.Controllers
 
         [HttpGet("CheckJogador")]
         public async Task<ActionResult<JogadorResponseBooleanStatus>>
-        CheckExistsJogadorByID([FromBody] jogadorQueryCheckExists query, CancellationToken cancellationToken)
+        CheckExistsJogadorByID([FromQuery] jogadorQueryCheckExists query, CancellationToken cancellationToken)
         {
             var response = await _mediatR.Send(query);
 
@@ -57,7 +57,7 @@ namespace GamesSystemBackEnd.API.Controllers
 
         [HttpGet("GetJogador")]
         public async Task<ActionResult<JogadorResponseGetJogador>>
-        GetJogadorAsync([FromBody] JogadorQueryGetJogador query, CancellationToken cancellationToken)
+        GetJogadorAsync([FromQuery] JogadorQueryGetJogador query, CancellationToken cancellationToken)
         {
             var response = await _mediatR.Send(query);
 
@@ -71,7 +71,7 @@ namespace GamesSystemBackEnd.API.Controllers
 
         [HttpGet("GetAllJogador")]
         public async Task<ActionResult<JogadorResponseGetAll>>
-        GetAllJogadorAsync([FromBody] JogadorQueryGetAll query, CancellationToken cancellationToken)
+        GetAllJogadorAsync([FromQuery] JogadorQueryGetAll query, CancellationToken cancellationToken)
         {
             var response = await _mediatR.Send(query);
 
@@ -117,7 +117,7 @@ namespace GamesSystemBackEnd.API.Controllers
 
         [HttpDelete]
         public async Task<ActionResult<JogadorResponseBooleanStatus>>
-        JogadorDeleteAsync([FromBody] JogadorCommandDelete commandDelete, CancellationToken cancellationToken)
+        JogadorDeleteAsync([FromQuery] JogadorCommandDelete commandDelete, CancellationToken cancellationToken)
         {
             var response = await _mediatR.Send(commandDelete);
 
