@@ -1,5 +1,7 @@
 # 🎮 GameSystem BackEnd
 
+##Atenção: Branch mais atual; from_dev_Rangel_02, porém está em desenvolvimento
+
 ## 📌 Sobre o Projeto
 O **GameSystem BackEnd** é uma aplicação desenvolvida em **.NET 8** com foco em arquitetura limpa e boas práticas de desenvolvimento.  
 O sistema foi projetado para gerenciar jogos e usuários, servindo como base de estudos em **DDD (Domain-Driven Design)**, **Clean Architecture** e **Testes Unitários**.
