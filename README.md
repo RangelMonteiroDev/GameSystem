@@ -1,8 +1,8 @@
-# 🎮 GameSystem BackEnd
+# 🎮 GameSystem 
 
 ## 📌 Sobre o Projeto
-O **GameSystem BackEnd** é uma aplicação desenvolvida em **.NET 8** com foco em arquitetura limpa e boas práticas de desenvolvimento.  
-O sistema foi projetado para gerenciar jogos e usuários, servindo como base de estudos em **DDD (Domain-Driven Design)**, **Clean Architecture** e **Testes Unitários**.
+O **GameSystem BackEnd** é uma aplicação desenvolvida em **.NET 8** para o BackEnd e **React** para o FrontEnd com foco em arquitetura limpa e boas práticas de desenvolvimento.  
+O sistema foi projetado para gerenciar jogos e usuários, servindo como base de estudos em **DDD (Domain-Driven Design)**, **Clean Architecture**, **Arquitetura MVC** e **Testes Unitários**.
 
 ---
 
@@ -23,7 +23,14 @@ O projeto segue os princípios da **Clean Architecture**, garantindo separação
 │── Infrastructure
 │── Presentation
 │── Tests
-```
+/GamesSystemFrontEnd
+|__ src/
+        -Controllers
+        -Models
+        -Security
+        -Services
+        -Views
+|
 
 ---
 
@@ -34,6 +41,11 @@ O projeto segue os princípios da **Clean Architecture**, garantindo separação
 - **FluentAssertions** → Asserções mais legíveis
 - **Moq** → Criação de mocks para testes
 - **Dependency Injection** → Injeção de dependência nativa do .NET
+- **Axios** → Para fazer requisições http como cliente da APi
+- **React** → Para desenvolver o FrontEnd
+- **ReactBootstrap** → Para desing (UI & UX)
+- **ReactRouterDom** → Para navegação no FrontEnd
+
 
 ---
 
@@ -66,11 +78,15 @@ cd GameSystem
 dotnet restore
 ```
 
-4. Execute a aplicação:
+4. Navegue até a API:
 ```bash
-dotnet run --project Presentation
+dotnet run
 ```
-
+5. No FrontEnd:
+```bash
+npm install
+npm run dev
+```
 ---
 
 ## 🧪 Como Rodar os Testes
